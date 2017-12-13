@@ -3,16 +3,16 @@
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
-/*$(document).ready(function(){
+$(document).ready(function(){
     $("button").click(function(){
         $.ajax({url: "https://api.coinmarketcap.com/v1/ticker/", success: function(result){
             $("#div1").html(result);
         }});
     });
-});*/
+});
 
 
-$.getJSON( "https://api.coinmarketcap.com/v1/ticker", function( data ) {
+/*$.getJSON( "https://api.coinmarketcap.com/v1/ticker", function( data ) {
   var items = [];
   $.each( data, function( key, val ) {
     items.push( "<li id='" + key + "'>" + val + "</li>" );
@@ -22,7 +22,7 @@ $.getJSON( "https://api.coinmarketcap.com/v1/ticker", function( data ) {
     "class": "my-new-list",
     html: items.join( "" )
   }).appendTo( "body" );
-});
+});*/
 </script>
 </head>
 <body>
