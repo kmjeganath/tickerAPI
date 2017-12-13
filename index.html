@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+/*$(document).ready(function(){
+    $("button").click(function(){
+        $.ajax({url: "https://api.coinmarketcap.com/v1/ticker/", success: function(result){
+            $("#div1").html(result);
+        }});
+    });
+});*/
+
+
+$.getJSON( "ajax/test.json", function( data ) {
+  var items = [];
+  $.each( data, function( key, val ) {
+    items.push( "<li id='" + key + "'>" + val + "</li>" );
+  });
+ 
+  $( "<ul/>", {
+    "class": "my-new-list",
+    html: items.join( "" )
+  }).appendTo( "body" );
+});
+</script>
+</head>
+<body>
+
+<div id="div1"><h2>Let jQuery AJAX Change This Text</h2></div>
+
+<button>Get External Content</button>
+<div></div>
+
+</body>
+</html>
